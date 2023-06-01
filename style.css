@@ -34,6 +34,16 @@ ul {
   padding-left: 0rem;
 }
 
+.toggle-btn-open {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fff;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -67,6 +77,11 @@ nav::before {
 .sidebar-top .logo {
   width: 150px;
   margin: 0 0.8rem;
+  transition: 0.5s ease;
+}
+.sidebar-top .logo.logo-hide {
+  display: none;
+  transition: 0.5s ease;
 }
 
 .sidebar-top h3 {
@@ -297,6 +312,53 @@ nav:hover .shrink-btn,
   transition: opacity 0.3s 0.2s;
 }
 
+body.mobile .shrink-btn,
+body.mobile .shrink-btn i {
+  display: none !important;
+}
+
+.toggle-btn-close {
+  display: none;
+}
+
+body.mobile .toggle-btn-close {
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 27px;
+  padding: 0 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  right: 0.35rem;
+  transition: 0.3s;
+}
+body.mobile .toggle-btn-close i {
+  line-height: 27px;
+  font-size: 25px;
+  transition: 0.3s;
+  color: #737a7c;
+  border: 1px solid #737a7c;
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    position: absolute;
+    top: 0;
+    left: -500px;
+    height: 100vh;
+    background-color: #fff;
+    width: 20rem;
+    padding: 1.8rem 0.85rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.5s ease-in-out;
+  }
+  body.mobile nav {
+    left: 0;
+  }
+}
+
 body.shrink nav {
   width: 5.4rem;
 }
@@ -324,10 +386,6 @@ body.shrink .account {
 body.shrink .admin-profile {
   max-width: 0;
   transition: opacity 0.3s 0s, max-width 0.7s 0s ease-in-out;
-}
-
-body.shrink .tooltip {
-  display: grid;
 }
 
 main {
