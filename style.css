@@ -641,7 +641,6 @@ main .copyright span {
 .form-section {
   height: 500px;
   width: 1000px;
-  padding: 20px 0;
   display: flex;
   position: relative;
   transition: all 0.5s ease-in-out;
@@ -673,10 +672,6 @@ main .copyright span {
   font-size: 20px;
   line-height: 100%;
   color: #151717;
-}
-
-.p-image-generation .form {
-  margin-top: 20px;
 }
 
 .p-image-generation .form-group {
@@ -751,6 +746,65 @@ main .copyright span {
   width: 100%;
   line-height: 100%;
   color: #ffffff;
+}
+
+.p-image-generation .upload-container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-color: #f3f5f7;
+  border: 1px dashed #b7b6b9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+#uploaded-text {
+  background: linear-gradient(
+    90deg,
+    #ff66f4 0%,
+    #6d26da 26.04%,
+    #001b99 56.25%,
+    #0058a7 79.69%,
+    #00c9dc 100%
+  );
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 96px;
+  transition: 0.3s ease-in-out;
+}
+
+#uploaded-text:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+#uploaded-text i {
+  margin-right: 8px;
+}
+
+#preview-image {
+  display: none;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 /* For Responsiveness of the page */
