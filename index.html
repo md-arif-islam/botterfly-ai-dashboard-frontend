@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sidebar Menu</title>
+  <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="sidebar-top">
+      <span class="shrink-btn">
+        <i class='bx bx-chevron-left'></i>
+      </span>
+      <img src="./img/logo.png" class="logo" alt="">
+      <h3 class="hide">BooterFly AI</h3>
+    </div>
+
+    <div id="sidebar-links" class="sidebar-links">
+      <ul>
+
+        <li>
+          <a href="#" class="active">
+            <div class="icon">
+              <i class='bx bx-home-alt'></i>
+            </div>
+            <span class="link hide">Dashboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="icon">
+              <i class='bx bx-cube'></i>
+            </div>
+            <span class="link hide">AI Art</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="icon">
+              <i class='bx bx-message-square-detail'></i>
+            </div>
+            <span class="link hide">Letter</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="icon">
+              <i class='bx bx-briefcase-alt-2'></i>
+            </div>
+            <span class="link hide">Bulk Letters</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="icon">
+              <i class='bx bx-food-menu'></i>
+            </div>
+            <span class="link hide">Templates</span>
+          </a>
+        </li>
+
+      </ul>
+
+      <h4 class="hide">Letters</h4>
+
+      <ul>
+
+        <li>
+          <a href="#">
+            <div class="icon">
+              <i style="color: #C69AFF;" class='bx bxs-square-rounded'></i>
+            </div>
+            <span class="link hide">Letter_test1</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="icon">
+              <i style="color: #9AC8FF;" class='bx bxs-square-rounded'></i>
+            </div>
+            <span class="link hide">Letter_test2</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="admin-user tooltip-element">
+        <div class="admin-profile hide">
+          <img src="./img/face-1.png" alt="">
+          <div class="admin-info">
+            <h3>John Carter <span class="free">Free</span> </h3>
+            <h5>johncarter@botterfly.io</h5>
+          </div>
+        </div>
+
+        <a href="#" class="upgrade-to-pro">
+          Upgrade to Pro
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <main class="p-index">
+    <div class="content">
+      <h1>Have fun with artsy, creepy and juicy AI generated images</h1>
+      <p class="text">
+        Generate AI art or images from text. It's unique, fun, and addictive. From lyrics to song lyrics, quotes to
+        jokes, make your own image or text art
+      </p>
+      <a class="gs-btn" href="">
+        Get Started
+      </a>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
