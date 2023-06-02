@@ -7,6 +7,7 @@ $(document).ready(function () {
   const tooltip_elements = $(".tooltip-element");
   const toggle_btn_open = $(".toggle-btn-open");
   const toggle_btn_close = $(".toggle-btn-close");
+  const sidebar_footer = $(".sidebar-footer");
 
   let r_art = $(".r-art");
   let utm = $(".utm");
@@ -35,6 +36,7 @@ $(document).ready(function () {
 
   shrink_btn.on("click", function () {
     $("#logo").toggleClass("logo-hide");
+    sidebar_footer.toggle();
     $("body").toggleClass("shrink");
     setTimeout(moveActiveTab, 400);
 
