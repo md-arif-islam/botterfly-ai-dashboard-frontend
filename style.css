@@ -884,12 +884,19 @@ main .copyright span {
   padding: 20px;
 }
 
-.generated-image-section .content .image-box img {
+.generated-image-section .content .image-box,
+.p-generated-images .content .image-box {
+  margin: 20px 10px;
+}
+
+.generated-image-section .content .image-box img,
+.p-generated-images .content .image-box img {
   width: 100%;
   height: auto;
 }
 
-.generated-image-section .content .image-box .buttons {
+.generated-image-section .content .image-box .buttons,
+.p-generated-images .content .image-box .buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -898,7 +905,8 @@ main .copyright span {
   gap: 10px;
 }
 
-.generated-image-section .content .image-box .buttons a {
+.generated-image-section .content .image-box .buttons a,
+.p-generated-images .content .image-box .buttons a {
   border: none !important;
   outline: none !important;
   padding: 8px 15px;
@@ -931,11 +939,13 @@ main .copyright span {
   color: #711ada;
 }
 
-.generated-image-section .content .image-box .buttons i {
+.generated-image-section .content .image-box .buttons i,
+.p-generated-images .content .image-box .buttons i {
   margin-left: 5px;
 }
 
-.generated-image-section .content .image-box .buttons a::before {
+.generated-image-section .content .image-box .buttons a::before,
+.p-generated-images .content .image-box .buttons a::before {
   content: "" !important;
   position: absolute !important;
   left: 1px !important;
@@ -948,11 +958,13 @@ main .copyright span {
   z-index: -1 !important;
 }
 
-.generated-image-section .content .image-box .buttons a:hover {
+.generated-image-section .content .image-box .buttons a:hover,
+.p-generated-images .content .image-box .buttons a:hover {
   transition: 0.3s ease-in-out;
 }
 
-.generated-image-section .content .image-box .buttons p {
+.generated-image-section .content .image-box .buttons p,
+.p-generated-images .content .image-box .buttons p {
   border: none !important;
   outline: none !important;
   padding: 8px 15px;
@@ -985,7 +997,8 @@ main .copyright span {
   color: #711ada;
 }
 
-.generated-image-section .content .image-box .buttons p::before {
+.generated-image-section .content .image-box .buttons p::before,
+.p-generated-images .content .image-box .buttons p::before {
   content: "" !important;
   position: absolute !important;
   left: 1px !important;
@@ -996,4 +1009,14 @@ main .copyright span {
   bottom: 1px !important;
   background-color: white !important;
   z-index: -1 !important;
+}
+
+/* --------------------- */
+
+.p-generated-images {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  display: block;
+  padding: 30px 20px;
 }
