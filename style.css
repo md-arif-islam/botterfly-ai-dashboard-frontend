@@ -33,9 +33,19 @@ ul {
   top: 10px;
   left: 10px;
   padding: 10px;
+  font-size: 25px;
+  line-height: 10px;
   border-radius: 10px;
   cursor: pointer;
-  background: #711ada;
+  background: linear-gradient(
+      90deg,
+      #ff66f4 0%,
+      #6d26da 26.04%,
+      #001b99 56.25%,
+      #0058a7 79.69%,
+      #00c9dc 100%
+    ),
+    linear-gradient(0deg, #fefefe, #fefefe) !important;
   color: #fff;
 }
 
@@ -100,11 +110,17 @@ nav::before {
 }
 
 .shrink-btn i {
-  line-height: 27px;
+  line-height: 30px;
   font-size: 25px;
   transition: 0.3s;
   color: #737a7c;
+  width: 30px;
+  text-align: center;
+  height: 30px;
+  border-radius: 50%;
   border: 1px solid #737a7c;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 nav:hover .shrink-btn,
@@ -120,6 +136,7 @@ nav:hover .shrink-btn,
 
 .sidebar-links li {
   position: relative;
+  margin: 5px 0;
 }
 
 .sidebar-links a {
