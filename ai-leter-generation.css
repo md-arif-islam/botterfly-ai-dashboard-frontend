@@ -1,0 +1,150 @@
+#d-leter-generation {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: #f3f5f7;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+/* -----leter-generation  */
+.p-leter-generation {
+  height: 98vh;
+  padding: 30px 15px;
+  width: 25rem;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+.p-leter-generation .content {
+  width: 100%;
+}
+
+.p-leter-generation .heading {
+  display: flex;
+  justify-content: start;
+  border-bottom: 1px solid #b7b6b9;
+  padding: 10px 0;
+}
+
+.p-leter-generation .heading .icon i {
+  font-size: 24px;
+  color: #6d26da;
+}
+
+.p-leter-generation .heading span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #151717;
+}
+
+.p-leter-generation .form {
+  margin-top: 20px;
+}
+
+.p-leter-generation .form-group {
+  padding: 7px 0;
+}
+
+.p-leter-generation .form label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  color: #151717;
+  margin-bottom: 10px;
+}
+
+.p-leter-generation .form input,
+.p-leter-generation .form select,
+.p-leter-generation .form textarea {
+  background: #f3f5f7;
+  border: 0px solid #b7b6b9;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.p-leter-generation .form input::placeholder,
+.p-leter-generation .form select::placeholder,
+.p-leter-generation .form textarea::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #929697;
+}
+
+.p-leter-generation .form small {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  padding-top: 5px;
+  line-height: 100%;
+  float: right;
+  text-align: right;
+  color: #b7b6b9;
+}
+
+.p-leter-generation .form .gs-btn {
+  margin-top: 20px;
+  padding: 16px 60px !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 96px !important;
+  background: linear-gradient(
+      90deg,
+      #ff66f4 0%,
+      #6d26da 26.04%,
+      #001b99 56.25%,
+      #0058a7 79.69%,
+      #00c9dc 100%
+    ),
+    linear-gradient(0deg, #fefefe, #fefefe) !important;
+  cursor: pointer !important;
+  z-index: 1 !important;
+  transition: 0.3s ease-in-out;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.chat-section {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 0 auto;
+}
+
+.chat-section .content {
+  height: 90vh;
+  padding: 30px;
+  background-color: #fff;
+  margin: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.chat-section .content h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6e7275;
+}
+
+.chat-section .content h2 span {
+  color: #febaf9;
+}

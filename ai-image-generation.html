@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Creation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="ai-image-generation.css">
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div id="d-image-generation">
+        <div class="p-image-generation">
+            <div class="heading">
+                <div class="icon">
+                    <i class='bx bx-food-menu'></i>
+                </div>
+                <span>Image Generation</span>
+            </div>
+            <div class="container">
+                <div class="slider"></div>
+                <div class="btn">
+                    <button class="utm">Upload to modify</button>
+                    <button class="r-art">Request art</button>
+                </div>
+                <div class="form-section">
+                    <div class="utm-box">
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="image-upload">Upload the image here</label>
+                                <div class="upload-container">
+                                    <input type="file" id="image-upload" accept="image/*" style="display: none;"
+                                        onchange="handleFileSelect(event)">
+                                    <label for="image-upload" class="upload-label" ondragover="handleDragOver(event)"
+                                        ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+                                        <span id="uploaded-text"><i class="fa fa-upload"></i>Click or drop image</span>
+                                        <img id="preview-image" src="#" alt="Preview" style="display: none;">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="wad">Write a detailed description with instructions for the
+                                    modifications</label>
+                                <textarea class="form-control" id="wad" rows="3"
+                                    placeholder="Enter key points and words you want to be included"></textarea>
+                                <small>Maximum 80 words</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="aoe">No. of variations</label>
+                                <select class="form-control" id="aoe">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="gs-btn">Modify Now</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="r-art-box">
+                        <form class="form">
+                            <div class="form-group">
+                                <label for="wad">Write a detailed descriptions with instructions for the
+                                    modifications</label>
+                                <textarea class="form-control" id="wad" rows="3"
+                                    placeholder="Enter key points and words you want to be included"></textarea>
+                                <small>Maximum 80 words</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="aoe">Image resolution</label>
+                                <select class="form-control" id="aoe">
+                                    <option>512x512</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="aoe">No. of samples</label>
+                                <select class="form-control" id="aoe">
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="woum">Add prompt</label>
+                                <input type="text" class="form-control" id="woum"
+                                    placeholder="Type your prompt here...">
+                                <small>Maximum 80 words</small>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="gs-btn">Generate AI Content</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="generated-image-section">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="image-box">
+                            <div class="image">
+                                <img src="./img/Rectangle 277.png" alt="">
+                            </div>
+                            <div class="buttons">
+                                <a href="">Download <i class='bx bx-download'></i></a>
+                                <p>Delivered on 12.06.2023 <i class='bx bx-calendar'></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="image-box">
+                            <div class="image">
+                                <img src="./img/Rectangle 277.png" alt="">
+                            </div>
+                            <div class="buttons">
+                                <a href="">Download <i class='bx bx-download'></i></a>
+                                <p>Delivered on 12.06.2023 <i class='bx bx-calendar'></i></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            let r_art = $(".r-art");
+            let utm = $(".utm");
+            let slider = $(".slider");
+            let formSection = $(".form-section");
+
+            r_art.on("click", function () {
+                slider.addClass("moveslider");
+                formSection.addClass("form-section-move");
+            });
+
+
+            utm.on("click", function () {
+                slider.removeClass("moveslider");
+                formSection.removeClass("form-section-move");
+            });
+
+            let activeIndex;
+
+
+            $(".upload-label").on("dragover", function (event) {
+                event.preventDefault();
+                $(this).addClass("drag-over");
+            });
+
+            $(".upload-label").on("dragleave", function (event) {
+                event.preventDefault();
+                $(this).removeClass("drag-over");
+            });
+
+            $(".upload-label").on("drop", function (event) {
+                event.preventDefault();
+                $(this).removeClass("drag-over");
+
+                var file = event.originalEvent.dataTransfer.files[0];
+                displayPreview(file);
+            });
+
+            $("#image-upload").on("change", function (event) {
+                var file = event.target.files[0];
+                displayPreview(file);
+            });
+
+            function displayPreview(file) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    var previewImage = $("#preview-image");
+                    previewImage.attr("src", e.target.result);
+                    previewImage.css("display", "block");
+
+                    var uploadedText = $("#uploaded-text");
+                    uploadedText.text(file.name);
+                    uploadedText.addClass("uploaded");
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

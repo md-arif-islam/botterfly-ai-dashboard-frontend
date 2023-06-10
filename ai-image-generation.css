@@ -1,0 +1,411 @@
+#d-image-generation {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: #f3f5f7;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .p-image-generation {
+    margin: 10px auto !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+}
+
+.p-image-generation {
+  width: 540px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  display: block;
+  padding: 30px 20px;
+}
+
+.p-image-generation .heading {
+  display: flex;
+  justify-content: start;
+  border-bottom: 1px solid #b7b6b9;
+  padding: 10px 0;
+}
+
+.p-image-generation .heading .icon i {
+  font-size: 24px;
+  color: #6d26da;
+}
+.p-image-generation .heading span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #151717;
+}
+
+.p-image-generation .container {
+  height: 98vh;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.p-image-generation .container .btn {
+  height: 50px;
+  width: 100%;
+  background: #ceabf9;
+  border-radius: 172px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.p-image-generation .container .utm,
+.p-image-generation .container .r-art {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 100%;
+  color: #fdfdfd;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider {
+  height: 50px;
+  width: 50%;
+  border-radius: 50px;
+  background: #711ada;
+  position: absolute;
+  top: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.moveslider {
+  left: 50%;
+}
+
+.form-section {
+  height: 500px;
+  width: 1000px;
+  display: flex;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  left: 0px;
+}
+
+.form-section-move {
+  left: -500px;
+}
+
+.utm-box,
+.r-art-box {
+  width: 500px;
+  padding: 0px 40px 0 20px;
+}
+
+.utm-box {
+  gap: 50px;
+}
+
+.r-art-box {
+  gap: 30px;
+}
+
+.p-image-generation .heading span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  color: #151717;
+}
+
+.p-image-generation .form-group {
+  padding: 7px 0;
+}
+
+.p-image-generation .form label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  color: #151717;
+  margin-bottom: 10px;
+}
+
+.p-image-generation .form input,
+.p-image-generation .form select,
+.p-image-generation .form textarea {
+  background: #f3f5f7;
+  border: 0px solid #b7b6b9;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.p-image-generation .form input::placeholder,
+.p-image-generation .form select::placeholder,
+.p-image-generation .form textarea::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #929697;
+}
+
+.p-image-generation .form small {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  padding-top: 5px;
+  line-height: 100%;
+  float: right;
+  text-align: right;
+  color: #b7b6b9;
+}
+
+.p-image-generation .form .gs-btn {
+  margin-top: 20px;
+  padding: 16px 60px !important;
+  border: none !important;
+  outline: none !important;
+  border-radius: 96px !important;
+  background: linear-gradient(
+      90deg,
+      #ff66f4 0%,
+      #6d26da 26.04%,
+      #001b99 56.25%,
+      #0058a7 79.69%,
+      #00c9dc 100%
+    ),
+    linear-gradient(0deg, #fefefe, #fefefe) !important;
+  cursor: pointer !important;
+  z-index: 1 !important;
+  transition: 0.3s ease-in-out;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.p-image-generation .upload-container {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  background-color: #f3f5f7;
+  border: 1px dashed #b7b6b9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.upload-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+#uploaded-text {
+  background: linear-gradient(
+    90deg,
+    #ff66f4 0%,
+    #6d26da 26.04%,
+    #001b99 56.25%,
+    #0058a7 79.69%,
+    #00c9dc 100%
+  );
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 96px;
+  transition: 0.3s ease-in-out;
+}
+
+#uploaded-text:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+#uploaded-text i {
+  margin-right: 8px;
+}
+
+#preview-image {
+  display: none;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/*  */
+
+.generated-image-section {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.generated-image-section .content {
+  padding: 20px;
+}
+
+.generated-image-section .content .image-box,
+.p-generated-images .content .image-box {
+  margin: 20px 10px;
+}
+
+.generated-image-section .content .image-box img,
+.p-generated-images .content .image-box img {
+  width: 100%;
+  height: auto;
+}
+
+.generated-image-section .content .image-box .buttons,
+.p-generated-images .content .image-box .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.generated-image-section .content .image-box .buttons a,
+.p-generated-images .content .image-box .buttons a {
+  border: none !important;
+  outline: none !important;
+  padding: 8px 15px;
+
+  border-radius: 8px !important;
+  position: relative !important;
+  background: linear-gradient(
+      90deg,
+      #ff66f4 0%,
+      #6d26da 26.04%,
+      #001b99 56.25%,
+      #0058a7 79.69%,
+      #00c9dc 100%
+    ),
+    linear-gradient(0deg, #fefefe, #fefefe) !important;
+  cursor: pointer !important;
+  z-index: 1 !important;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 116%;
+  /* or 16px */
+
+  display: flex;
+  align-items: center;
+
+  /* Color/MainPurple */
+
+  color: #711ada;
+}
+
+.generated-image-section .content .image-box .buttons i,
+.p-generated-images .content .image-box .buttons i {
+  margin-left: 5px;
+}
+
+.generated-image-section .content .image-box .buttons a::before,
+.p-generated-images .content .image-box .buttons a::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 1px !important;
+  border-radius: 8px !important;
+
+  right: 1px !important;
+  top: 1px !important;
+  bottom: 1px !important;
+  background-color: white !important;
+  z-index: -1 !important;
+}
+
+.generated-image-section .content .image-box .buttons a:hover,
+.p-generated-images .content .image-box .buttons a:hover {
+  transition: 0.3s ease-in-out;
+}
+
+.generated-image-section .content .image-box .buttons p,
+.p-generated-images .content .image-box .buttons p {
+  border: none !important;
+  outline: none !important;
+  padding: 8px 15px;
+  border-radius: 8px !important;
+  margin-bottom: 0;
+  position: relative !important;
+  background: linear-gradient(
+      90deg,
+      #ff66f4 0%,
+      #6d26da 26.04%,
+      #001b99 56.25%,
+      #0058a7 79.69%,
+      #00c9dc 100%
+    ),
+    linear-gradient(0deg, #fefefe, #fefefe) !important;
+  cursor: pointer !important;
+  z-index: 1 !important;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 116%;
+  /* or 16px */
+
+  display: flex;
+  align-items: center;
+
+  /* Color/MainPurple */
+
+  color: #711ada;
+}
+
+.generated-image-section .content .image-box .buttons p::before,
+.p-generated-images .content .image-box .buttons p::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 1px !important;
+  border-radius: 8px !important;
+
+  right: 1px !important;
+  top: 1px !important;
+  bottom: 1px !important;
+  background-color: white !important;
+  z-index: -1 !important;
+}
+
+/* --------------------- */
+
+.p-generated-images {
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  display: block;
+  padding: 30px 20px;
+}

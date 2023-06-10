@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+
+    <!-- External CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    rel="stylesheet">
+    <link rel="stylesheet" href="d-sidebar.css">
+</head>
+
+<body>
+    <div id="d-sidebar">
+        <!-- Sidebar -->
+        <div class="toggle-btn-open">
+            <i class='bx bx-food-menu'></i>
+        </div>
+
+        <nav>
+            <!-- Sidebar Top Section -->
+            <div class="sidebar-top">
+                <span class="shrink-btn">
+                    <i class='bx bx-chevron-left'></i>
+                </span>
+                <span class="shrink-btn">
+                    <i class='bx bx-chevron-left'></i>
+                </span>
+                <img src="./img/logo.png" id="logo" class="logo" alt="">
+
+            </div>
+
+            <!-- Sidebar Links Section -->
+            <div id="sidebar-links" class="sidebar-links">
+                <ul>
+                    <li>
+                        <a href="#" class="active">
+                            <div class="icon">
+                                <i class='bx bx-home-alt'></i>
+                            </div>
+                            <span class="link hide">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class='bx bx-cube'></i>
+                            </div>
+                            <span class="link hide">AI Art</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class='bx bx-message-square-detail'></i>
+                            </div>
+                            <span class="link hide">Letter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class='bx bx-briefcase-alt-2'></i>
+                            </div>
+                            <span class="link hide">Bulk Letters</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i class='bx bx-food-menu'></i>
+                            </div>
+                            <span class="link hide">Templates</span>
+                        </a>
+                    </li>
+                </ul>
+                <h4 class="hide">Letters</h4>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i style="color: #C69AFF;" class='bx bxs-square-rounded'></i>
+                            </div>
+                            <span class="link hide">Letter_test1</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="icon">
+                                <i style="color: #9AC8FF;" class='bx bxs-square-rounded'></i>
+                            </div>
+                            <span class="link hide">Letter_test2</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <div class="admin-user tooltip-element">
+                    <div class="admin-profile hide">
+                        <img src="./img/face-1.png" alt="">
+                        <div class="admin-info">
+                            <h3>John Carter <span class="free">Free</span> </h3>
+                            <h5>johncarter@botterfly.io</h5>
+                        </div>
+                    </div>
+                    <a href="#" class="upgrade-to-pro">
+                        Upgrade to Pro
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const shrink_btn = $(".shrink-btn");
+            const sidebar_links = $(".sidebar-links a");
+            const active_tab = $(".active-tab");
+            const logo = $("#logo");
+            const shortcuts = $(".sidebar-links h4");
+            const toggle_btn_open = $(".toggle-btn-open");
+            const toggle_btn_close = $(".toggle-btn-close");
+            const sidebar_footer = $(".sidebar-footer");
+
+            toggle_btn_open.on("click", function () {
+                $("#d-sidebar").addClass("mobile");
+            });
+
+            toggle_btn_close.on("click", function () {
+                $("#d-sidebar").removeClass("mobile");
+            });
+
+            shrink_btn.on("click", function () {
+                $("#logo").toggleClass("logo-hide");
+                sidebar_footer.toggle();
+                $("#d-sidebar").toggleClass("shrink");
+                setTimeout(moveActiveTab, 400);
+
+                shrink_btn.addClass("hovered");
+
+                setTimeout(function () {
+                    shrink_btn.removeClass("hovered");
+                }, 500);
+            });
+
+            // Using jQuery
+            $("a").on("click", function () {
+                $(this).toggleClass("active");
+            });
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
